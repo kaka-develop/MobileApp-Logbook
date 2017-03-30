@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Data Entry Screen</title>
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="mdl-card mdl-shadow--3dp m-card">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="activity_name" required minlength="3">
+                    <label class="mdl-textfield__label" for="activity_name">Activity Name</label>
+                    <span class="mdl-textfield__error">This is required and more than 3 characters!</span>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="reporter_name" required minlength="3">
+                    <label class="mdl-textfield__label" for="reporter_name">Reporter Name</label>
+                    <span class="mdl-textfield__error">This is required and more than 3 characters!</span>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="date" id="activity_date" required>
+                    <label class="mdl-textfield__label" for="activity_date">Activity Date</label>
+                    <span class="mdl-textfield__error">This is required!</span>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="location" minlength="3">
+                    <label class="mdl-textfield__label" for="location">Location</label>
+                    <span class="mdl-textfield__error">This is required and more than 3 characters!</span>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="time" id="attending_time">
+                    <label class="mdl-textfield__label" for="attending_time">Attending Time</label>
+                </div>
+            </form>
+            <div class="mdl-card__actions">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">New Event</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>
