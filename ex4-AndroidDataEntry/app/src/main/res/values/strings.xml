@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DataEntryScreen</string>
+    <string name="activity_name">Activity Name</string>
+    <string name="report_name">Reporter Name</string>
+    <string name="activity_date">Activity Date</string>
+    <string name="location_name">Location Name</string>
+    <string name="attending_time">Attending Time</string>
+    <string name="btn_submit">New event</string>
+</resources>
