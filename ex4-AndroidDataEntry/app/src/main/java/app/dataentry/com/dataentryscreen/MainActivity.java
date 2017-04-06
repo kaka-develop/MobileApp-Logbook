@@ -89,9 +89,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Add new event successfully!", Toast.LENGTH_LONG).show();
         reset();
     }
-
-
-
-
 }
 

@@ -26,13 +26,50 @@ public class MainActivityTest {
             MainActivity.class);
 
     @Test
-    public void testEnterTextField(){
+    public void testEnterActivityName(){
         onView(withId(R.id.activity_name)).check(matches(withText("")));
-
         String text  =  "AAAAAA";
         onView(withId(R.id.activity_name)).perform(ViewActions.typeText(text));
         onView(withId(R.id.activity_name)).check(matches(withText(text)));
     }
+
+    @Test
+    public void testEnterActivityDate(){
+        String text  =  "AAAAAA";
+        onView(withId(R.id.activity_date)).check(matches(withText("")));
+        onView(withId(R.id.activity_date)).perform(ViewActions.typeText(text));
+        onView(withId(R.id.activity_date)).check(matches(withText("")));
+        onView(withId(R.id.activity_name)).perform(closeSoftKeyboard());
+
+        text  =  "12/12/2017";
+        onView(withId(R.id.activity_date)).perform(ViewActions.typeText(text));
+        onView(withId(R.id.activity_date)).check(matches(withText(text)));
+    }
+
+    @Test
+    public void testEnterReporterName(){
+        String text  =  "AAAAAA";
+        onView(withId(R.id.report_name)).check(matches(withText("")));
+        onView(withId(R.id.report_name)).perform(ViewActions.typeText(text));
+        onView(withId(R.id.report_name)).check(matches(withText(text)));
+    }
+
+    @Test
+    public void testEnterLocationName(){
+        String text  =  "AAAAAA";
+        onView(withId(R.id.location_name)).check(matches(withText("")));
+        onView(withId(R.id.location_name)).perform(ViewActions.typeText(text));
+        onView(withId(R.id.location_name)).check(matches(withText(text)));
+    }
+
+    @Test
+    public void testEnterAttendingTime(){
+        String text  =  "12:30";
+        onView(withId(R.id.attending_time)).check(matches(withText("")));
+        onView(withId(R.id.attending_time)).perform(ViewActions.typeText(text));
+        onView(withId(R.id.attending_time)).check(matches(withText(text)));
+    }
+
 
     @Test
     public void testEnterInvalidAndSubmit() {
@@ -58,6 +95,4 @@ public class MainActivityTest {
         onView(withId(R.id.btn_submit)).perform(click());
         onView(withId(R.id.attending_time)).check(matches(hasErrorText(MainValidError.TIME)));
     }
-
-
 }

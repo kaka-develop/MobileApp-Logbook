@@ -14,6 +14,7 @@ public class MainValidation {
         return text.isEmpty();
     }
 
+
     public static boolean validateDate(String text) {
         if(text == null)
             return false;

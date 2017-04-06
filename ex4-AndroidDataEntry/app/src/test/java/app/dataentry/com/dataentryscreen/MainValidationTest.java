@@ -21,7 +21,6 @@ public class MainValidationTest {
         text = "AAAAA";
         assertThat(MainValidation.checkEmpty(text),is(false));
 
-
     }
 
     @Test
